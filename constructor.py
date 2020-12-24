@@ -3,7 +3,7 @@ class Persona:
     apellido=""
     edad=0
 
-    #aqui definimos el constructor
+    #aqui definimos el constructor  (aunque hay una disputa si init es realmente un constructor o no)
     def __init__(self,nombre, apellido, edad):
         self.nombre = nombre
         self.apellido = apellido
