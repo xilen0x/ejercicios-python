@@ -3,6 +3,7 @@
 import urllib.request as request
 from urllib.request import urlopen
 from bs4 import BeautifulSoup
+import re
 
 print("Auditoría al site 'python.org'")
 
@@ -20,7 +21,7 @@ print("Content-Length: ", site.headers['content-length'])
 
 #---------- Verificar description ----------#
 site = request.urlopen('https://python.org')
-soup = BeautifulSoup(site)
+soup = BeautifulSoup(site, "html.parser")
 description = soup.find('meta', attrs={'name':'description'})
 print('El tamaño de la description de python.org es: ', len(description.get('content')))
 if (len(description.get('content')))<154:
@@ -28,6 +29,34 @@ if (len(description.get('content')))<154:
 
 #---------- Verificar etiqueta titulo ----------#
 html = urlopen('https://python.org')
-soup = BeautifulSoup(html.read())
+soup = BeautifulSoup(html.read(), "html.parser")
 print("El tamaño del title es: ", len(soup.html.head.title.string))
 print("y dice: ", soup.html.head.title.string)
+
+#---------- Obtener las Palabras clave del sitio ----------#
+site = request.urlopen('https://python.org')
+soup = BeautifulSoup(site, "html.parser")
+keywords = soup.find('meta', attrs={'name':'keywords'})
+print('Keywords: ', keywords.get('content'))
+words = keywords.get('content').split()
+print(words)
+for word in words:
+    print(word,len(soup.findAll(text=re.compile(word))))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
