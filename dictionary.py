@@ -26,3 +26,20 @@ print(nuevo_diccionario)
 otro_diccionario = {'libro2':'Desconocido'}
 autores.update(otro_diccionario)
 print(autores)
+#---------------------------------Otro ejempplo--------------------------------------
+mi_diccionario = {
+    "nombre":"Carlos",
+    "apellido":"Astorga",
+    "ciudad":"Copiapó",
+}
+print(mi_diccionario)
+
+mi_diccionario["sexo"]="Hombre"
+print(mi_diccionario)
+
+del mi_diccionario["sexo"]
+print(mi_diccionario)
+
+#---IMPRIMIR LA LONGITUD DEL DICCIONARIO CON LEN:
+
+print(len(mi_diccionario))
