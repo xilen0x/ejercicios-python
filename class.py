@@ -16,8 +16,7 @@ saludo =  Persona()
 saludo.saludar()
 print("-----------------")
 saludo.despedir() """
-
-#Ejemplo 2
+""" #Ejemplo 2
 class Automovil():
     modelo = "sedan"
     puertas = 4
@@ -30,8 +29,44 @@ class Automovil():
 
 audi_a4 = Automovil() #creo la instancia audi_a4
 
-audi_a4.encender() # llamamos a el método, el cual cambiará el encendido a True
+respuesta = input("Quieres encender el audi? SI, NO: ")
+respuesta = respuesta.lower()
+if respuesta=='si':
+    audi_a4.encender() # llamamos a el método, el cual cambiará el encendido a True
+    print("El vehículo es un", audi_a4.modelo, "de", audi_a4.puertas, "puertas y se encuentra Encendido")
+else:
+    print("El vehículo es un", audi_a4.modelo, "de", audi_a4.puertas, "puertas y se encuentra Apagado")
 
-print(audi_a4.encendido)
+vw = Automovil()
+print("El segundo coche es un VW tipo",vw.modelo) """
 
-print("El vehículo es un", audi_a4.modelo, "de", audi_a4.puertas, "puertas")
+
+#Ejemplo 3 - agregamos el concepto de constructor el cual es el estado inicial de la clase
+class Coche():
+    def __init__(self):
+        self.__modelo = "sedan" # El doble guion bajo __ antes del nombre de la variable, indica que estamos encapsulando
+        self.__puertas = 4      # la variable para que no pueda ser modificable desde el exterior de la clase.
+        self.__combustible = "gasolina"
+        self.__cilindradada = 2
+        self.__enmarcha = False
+
+    def arrancar(self, arrancamos):
+        self.__enmarcha = arrancamos
+
+        if (self.__enmarcha):
+            return "El coche está en marcha"
+        else:
+            return "El coche está parado"
+
+    def estado(self):
+        print("El coche es un", self.__modelo,". Tiene", self.__puertas, "puertas.", "Utiliza", self.__combustible)
+
+audi = Coche()
+print(audi.arrancar(True))
+audi.estado()
+
+print("----------------------------------------------------------------")
+
+vw = Coche()
+print(vw.arrancar(False))
+vw.estado()
