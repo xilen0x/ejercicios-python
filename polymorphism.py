@@ -23,7 +23,7 @@ khumo = Camion()
 audi = Coche()
 yamaha = Moto()
 
-#llamadas a la función movimiento:
+#llamadas a la función movimiento: 
 movimiento(khumo)
 movimiento(audi)
 movimiento(yamaha)
