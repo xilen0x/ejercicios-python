@@ -33,9 +33,10 @@ Si tiene una ‘@’ la dirección será correcta. Si tiene más de una o ningun
 Si la ‘@’ está al comienzo de la dirección de email o al final, la dirección también será errónea """
 
 almacenaEmail = input("ingresa tu email: ")
-email = almacenaEmail.lower()
-arroba = email.count('@')
+email = almacenaEmail.lower() # convertir a minuscula
+arroba = email.count('@')     # contar las veces q aparece la @
 
+#mientras arroba sea distinto de 1, o si encuentra la @ al final del email o al comienzo:
 while (arroba != 1 or email.rfind('@')==(len(email)-1) or email.find('@')==0):
     print("Debe ingresar su email correctamente!")
     almacenaEmail = input("Ingrese su email: ")
