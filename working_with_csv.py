@@ -1,11 +1,10 @@
 #creación de un archivo csv y guardado de datos en él
-
 import csv
 
 doc_csv = open('archivo.csv', 'w')
 data = csv.writer(doc_csv)
 lista = [
-    ["carlos@hotmail.ocm",78451232],
+    ["carlos@hotmail.com",78451232],
     ["claudia@gmail.com",32215487],
     ["cristian@latinmail.com",65653298]
 ]
