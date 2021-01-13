@@ -34,7 +34,7 @@ labelDireccion.grid(row=2, column=0, sticky="e")
 labelComentarios = Label(miFrame, text="Comentarios: ")
 labelComentarios.grid(row=1, column=0, sticky="e") 
 
-#-------------------------------------------Agregamos un botón con Button(root, text="textoCualquiera")--:
+#-------------------------------------------Agregamos una función y un botón con Button(root, text="textoCualquiera")--:
 def codigoBoton():#función que inserta "Carlos" cuando se presiona el botón.
     miNombre.set("Carlos")
 
