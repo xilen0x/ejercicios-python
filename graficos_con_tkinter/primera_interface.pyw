@@ -11,13 +11,13 @@ raiz.title("Soy el título de la ventana")
 #raiz.resizable(0,1) #--> Es posible redimencionar solo el alto
 #raiz.resizable(0,True) #--> También es posible utilizar True or False para el mismo efecto
 
-#raiz.iconbitmap("favicon.ico") #esto para el ícono pero tiene algún error...
+#raiz.iconbitmap("web.png") #esto para el ícono pero tiene algún error...
 
 #Para el tamaño de la ventana:
 raiz.geometry('800x500')
 
-#Aplicar color de fondo a la venta con la siguiente línea, aunque podemos abviarlo agregandole color al frame:
-raiz.config(bg="red")
+#Aplicar color de fondo a la ventana con la siguiente línea, aunque podemos abviarlo agregandole color al frame:
+#raiz.config(bg="red")
 
 #Crear un frame o marco para trabajar en él:
 miFrame = Frame()
@@ -29,7 +29,7 @@ miFrame.pack()
 #miFrame.pack(side="right", anchor="s") #s de SUR, n=NORTE(arriba)
 
 #Color al frame (el cual no se verá a menos que le demos las dimensiones):
-miFrame.config(bg="black")
+#miFrame.config(bg="black")
 miFrame.config(width="760", height="480")
 
 #Si queremos expandir el frame en sentido horizontal:
@@ -40,12 +40,12 @@ miFrame.config(width="760", height="480")
 #miFrame.pack(fill="both", expand="True")
 
 # Si queremos modificar el borde del frame:
-miFrame.config(bd=30)
+#miFrame.config(bd=30)
 #miFrame.config(relief="groove")
-miFrame.config(relief="sunken")
+#miFrame.config(relief="sunken")
 
 #Cambiar el cursor:
-miFrame.config(cursor="hand2")
+#miFrame.config(cursor="hand2")
 
 
 #Esta línea siempre debe ir al final
