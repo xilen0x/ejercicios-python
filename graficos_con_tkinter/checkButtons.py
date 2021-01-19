@@ -28,8 +28,8 @@ def opciones():
     textoFinal.config(text=opcionEscogida)
 
 #Imagen
-foto = PhotoImage(file="playa.png")
-Label(root, image=foto).pack()
+""" foto = PhotoImage(file="playa.png")
+Label(root, image=foto).pack() """
 
 #Label
 Label(miFrame, text="Escoja un destino o ḿas de uno:").pack()
@@ -39,12 +39,8 @@ Checkbutton(miFrame, text="Playa", variable=playa, onvalue=1, offvalue=0, comman
 Checkbutton(miFrame, text="Montaña", variable=montana, onvalue=1, offvalue=0, command=opciones).pack()
 Checkbutton(miFrame, text="Bosque", variable=bosque, onvalue=1, offvalue=0, command=opciones).pack()
 
-
 textoFinal = Label(miFrame)
 textoFinal.pack()
-
-
-
 
 
 root.mainloop()

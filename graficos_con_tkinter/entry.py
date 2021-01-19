@@ -9,6 +9,7 @@ miFrame.pack()
 entryNombre = Entry(miFrame)
 entryNombre.grid(row=0, column=1, padx=10, pady=10)# pad* es el padding 
 entryNombre.config(fg="red") #color de fuente rojo
+
 entryPass = Entry(miFrame)
 entryPass.grid(row=1, column=1, padx=10, pady=10)
 entryPass.config(show="*") # para reemplazar el password por asteriscos

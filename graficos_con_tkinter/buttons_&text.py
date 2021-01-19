@@ -4,11 +4,11 @@ root = Tk()
 miFrame = Frame(root, width=500, height=400)
 miFrame.pack()
 
-# Utilizamos la grilla para ubicar los elementos de forma correcta
 # -------------------------------------------Cuadros de texto o entry-------------------------------------------:
 #entryNombre = Entry(miFrame)
 miNombre=StringVar()#con estas dos lineas(10, 11) asociamos el campo de texto con la variable miNombre
 entryNombre = Entry(miFrame, textvariable=miNombre)
+# Utilizamos la grilla para ubicar los elementos de forma correcta
 entryNombre.grid(row=0, column=1, padx=10, pady=10)# pad* es el padding 
 entryNombre.config(fg="red") #color de fuente rojo
 
